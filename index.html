@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css" />
+        <script src="index.js" defer></script>
+
+        <title>Test Animation</title>
+    </head>
+    <body>
+        <div class="game-screen" id="game-screen">
+            
+            <div class="SCREEN01 main-menu">
+                <button id="screen01-button-start"></button>
+                    <!-- Start Game
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span> -->
+            </div>
+
+            <div class="SCREEN02 hide">
+                <h4 class="header">Select Characters</h4>
+                <div class="character-selection-wrapper">
+                    <div class="player01-selection-wrapper selection-wrapper">
+                        <h4 class="player01-header">Player 1</h4>
+                        <div class="characters">
+                            <div class="character">
+                                <label for="Kenji1">
+                                    <input
+                                        type="radio"
+                                        name="player01"
+                                        id="Kenji1"
+                                        value="Kenji"
+                                        class="character-icon"
+                                        hidden
+                                    />
+                                    <img
+                                        src="https://cdn.myanimelist.net/r/360x360/images/characters/13/379207.jpg?s=3a76e05570955c644f43bf3a23e65cf5"
+                                        alt=""
+                                    />
+                                </label>
+                            </div>
+                            <div class="character">
+                                <label for="Kenshin1">
+                                    <input
+                                        type="radio"
+                                        name="player01"
+                                        id="Kenshin1"
+                                        value="Kenshin"
+                                        class="character-icon"
+                                        hidden
+                                    />
+                                    <img
+                                        src="https://c4.wallpaperflare.com/wallpaper/158/367/605/anime-batosai-kenshin-himura-samurai-x-wallpaper-preview.jpg"
+                                        alt=""
+                                    />
+                                </label>
+                            </div>
+                            <div class="character">
+                                <label for="Lapulapu1">
+                                    <input
+                                        type="radio"
+                                        name="player01"
+                                        id="Lapulapu1"
+                                        value="Lapu-Lapu"
+                                        class="character-icon"
+                                        hidden
+                                    />
+                                    <img
+                                        src="https://pm1.narvii.com/7665/16d1abc6c7d74bb85d2fbbcb6081d0c37151cd8ar1-430-474v2_uhq.jpg"
+                                        alt=""
+                                    />
+                                </label>
+                            </div>
+                            <div class="character">
+                                <label for="Brain1">
+                                    <input
+                                        type="radio"
+                                        name="player01"
+                                        id="Brain1"
+                                        value="Brain"
+                                        class="character-icon"
+                                        hidden
+                                    />
+                                    <img
+                                        src="https://images4.alphacoders.com/127/1279468.png"
+                                        alt=""
+                                    />
+                                </label>
+                            </div>
+                        </div>
+                        <h4 class="player01-character-selected"></h4>
+                    </div>
+
+                    <div class="player02-selection-wrapper selection-wrapper">
+                        <h4 class="player02-header">Player 2</h4>
+                        <div class="characters">
+                            <div class="character">
+                                <label for="Kenji2">
+                                    <input
+                                        type="radio"
+                                        name="player02"
+                                        id="Kenji2"
+                                        value="Kenji"
+                                        class="character-icon"
+                                        hidden
+                                    />
+                                    <img
+                                        src="https://cdn.myanimelist.net/r/360x360/images/characters/13/379207.jpg?s=3a76e05570955c644f43bf3a23e65cf5"
+                                        alt=""
+                                    />
+                                </label>
+                            </div>
+                            <div class="character">
+                                <label for="Kenshin2">
+                                    <input
+                                        type="radio"
+                                        name="player02"
+                                        id="Kenshin2"
+                                        value="Kenshin"
+                                        class="character-icon"
+                                        hidden
+                                    />
+                                    <img
+                                        src="https://c4.wallpaperflare.com/wallpaper/158/367/605/anime-batosai-kenshin-himura-samurai-x-wallpaper-preview.jpg"
+                                        alt=""
+                                    />
+                                </label>
+                            </div>
+                            <div class="character">
+                                <label for="Lapulapu2">
+                                    <input
+                                        type="radio"
+                                        name="player02"
+                                        id="Lapulapu2"
+                                        value="Lapu-Lapu"
+                                        class="character-icon"
+                                        hidden
+                                    />
+                                    <img
+                                        src="https://pm1.narvii.com/7665/16d1abc6c7d74bb85d2fbbcb6081d0c37151cd8ar1-430-474v2_uhq.jpg"
+                                        alt=""
+                                    />
+                                </label>
+                            </div>
+                            <div class="character">
+                                <label for="Brain2">
+                                    <input
+                                        type="radio"
+                                        name="player02"
+                                        id="Brain2"
+                                        value="Brain"
+                                        class="character-icon"
+                                        hidden
+                                    />
+                                    <img
+                                        src="https://images4.alphacoders.com/127/1279468.png"
+                                        alt=""
+                                    />
+                                </label>
+                            </div>
+                        </div>
+                        <h4 class="player02-character-selected"></h4>
+                    </div>
+                </div>
+                <button id="screen02-button-continue" class="hide">Continue</button>
+            </div>
+
+
+            <div class="SCREEN03 scene-selection hide">
+                <div class="scene-selection-wrapper">
+                    <h4 class="header">Select scene</h4>
+                    <div class="scenes">
+                        <div class="scene">
+                            <label for="scene1">
+                                <input
+                                    type="radio"
+                                    name="scene"
+                                    id="scene1"
+                                    value="scene1"
+                                    class="scene-icon"
+                                    hidden
+                                />
+                                <img
+                                    src="assets/scenes/scene-1.gif"
+                                    alt=""
+                                    class="img-scene-icon scene-1"
+                                />
+                            </label>
+                        </div>
+                        <div class="scene">
+                            <label for="scene2">
+                                <input
+                                    type="radio"
+                                    name="scene"
+                                    id="scene2"
+                                    value="scene2"
+                                    class="scene-icon"
+                                    hidden
+                                />
+                                <img
+                                    src="assets/scenes/scene-2.gif"
+                                    alt=""
+                                    class="img-scene-icon scene-2"
+                                />
+                            </label>
+                        </div>
+                        <div class="scene">
+                            <label for="scene3">
+                                <input
+                                    type="radio"
+                                    name="scene"
+                                    id="scene3"
+                                    value="scene3"
+                                    class="scene-icon"
+                                    hidden
+                                />
+                                <img
+                                    src="assets/scenes/scene-3.gif"
+                                    alt=""
+                                    class="img-scene-icon scene-3"
+                                />
+                            </label>
+                        </div>
+                        <div class="scene">
+                            <label for="scene4">
+                                <input
+                                    type="radio"
+                                    name="scene"
+                                    id="scene4"
+                                    value="scene4"
+                                    class="scene-icon"
+                                    hidden
+                                />
+                                <img
+                                    src="assets/scenes/scene-4.gif"
+                                    alt=""
+                                    class="img-scene-icon scene-4"
+                                />
+                            </label>
+                        </div>
+                        <div class="scene">
+                            <label for="scene5">
+                                <input
+                                    type="radio"
+                                    name="scene"
+                                    id="scene5"
+                                    value="scene5"
+                                    class="scene-icon"
+                                    hidden
+                                />
+                                <img
+                                    src="assets/scenes/scene-5.gif"
+                                    alt=""
+                                    class="img-scene-icon scene-5"
+                                />
+                            </label>
+                        </div>
+                        <div class="scene">
+                            <label for="scene6">
+                                <input
+                                    type="radio"
+                                    name="scene"
+                                    id="scene6"
+                                    value="scene6"
+                                    class="scene-icon"
+                                    hidden
+                                />
+                                <img
+                                    src="assets/scenes/scene-6.gif"
+                                    alt=""
+                                    class="img-scene-icon scene-6"
+                                />
+                            </label>
+                        </div>
+                    </div>
+                    <h4 class="player02-character-selected"></h4>
+                </div>
+                <button id="screen03-button-continue" class="hide">Continue</button>
+            </div>
+
+            <div class="SCREEN04 hide">
+                <div class="top-menu-wrapper">
+                    <div class="hp-bar-wrapper">
+                        <div id="player1-hp-bar"></div>
+                    </div>
+                    <div class="center">
+                        <button id="pause">
+                            <i class="fa fa-pause"></i>
+                        </button>
+                        <div id="timer">02:00</div>
+                    </div>
+                    <div class="hp-bar-wrapper">
+                        <div id="player2-hp-bar"></div>
+                    </div>
+                </div>
+                <div class="player" id="player1">
+                    <img id="player1-canvas"></img>
+                </div>
+                <div class="player" id="player2">
+                    <img id="player2-canvas"></img>
+                </div>
+                
+                <div class="pause-menu">
+                    <div class="button-wrapper">
+                        <button id="resume-button" class="button button-1">Resume</button>
+                    </div>
+                    <div class="button-wrapper">
+                        <button id="restart-button" class="button button-2">Restart</button>
+                    </div>
+                    <div class="button-wrapper">
+                        <button id="select-characters-button" class="button button-3">Select Characters</button>
+                    </div>
+                    <div class="button-wrapper">
+                        <button id="quit-button" class="button button-4">Quit</button>
+                    </div>
+                </div>
+                <div class="fight-start-popup">Fight</div>
+                <div class="game-over-popup">Game Over</div>
+                <div class="player-wins-popup"></div>
+            </div>
+    </body>
+</html>
